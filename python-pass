@@ -1,0 +1,10 @@
+x=int(input("enter x value:"))
+def num(x):
+    for i in range(x):
+        x=int(input())
+        n=x%2
+        if(n==0):
+            print(x,"is even")
+        else:
+            print(x,"is odd")
+num(x)
