@@ -1,0 +1,69 @@
+//Q1
+//The errors :
+//We can’t use *const for *DateTime variables because they’re constantly changing and const is constant takes only one value
+//we must use *DateTime before the *hour variable instead of *const
+//we must use *new before *DateTime 
+//*.hour must be added beside *hour variable in print like this: print(hour.hour) and remove it from *DateTime hour variable
+
+//the correct code :
+void main() {
+  DateTime hour= new DateTime.now();
+  print(hour.hour);
+}
+
+//Q2
+
+void main(){
+  
+  var dog = Dog();
+  var cat = Cat();
+  var cow = Cow();
+  dog.printName();
+  dog.printSound();
+  cat.printName();
+  cat.printSound();
+  cow.printName();
+  cow.printSound();
+  
+}
+
+abstract class Animal {
+  void printName();
+  void printSound();
+}
+
+class Dog extends Animal {
+  String n = "Dog";
+  void printName() {
+    print("${n}");
+  }
+
+  String s = "Haw Haw";
+  void printSound() {
+    print("${s}");
+  }
+}
+
+class Cat extends Animal { 
+  String n = "Cat";
+  void printName() {
+    print("${n}");
+  }
+
+  String s = "Meow";
+  void printSound() {
+    print("${s}");
+  }
+}
+
+class Cow extends Animal {
+  String n = "Cow";
+  void printName() {
+    print("${n}");
+  }
+
+  String s = "Moo";
+  void printSound() {
+    print("${s}");
+  }
+}
